@@ -14,19 +14,28 @@ The purpose of this repo is to:
 ## 📁 Repository Structure
 
 ``` md
-advent-of-code/
+ADVENT_OF_CODE/
+├── .venv/
 │
-├── 2024/
-│   ├── day01/
-│   │   ├── solution.py
-│   │   └── notes.md
-│   ├── day02/
-│   └── ...
+├── src/
+│ │
+│ ├── aoc2025/ # Year folder (e.g., 2025)
+│ │ │
+│ │ ├── day1/ # Day folder
+│ │ │ ├── day1_a.txt # Input A
+│ │ │ ├── day1_b.txt # Input B
+│ │ │ └── day1.py # Solution for Day 1
+│ │ │
+│ │ └── aoc2025.py
+│ │
+│ ├── utils/ # Shared utility functions
+│ │ ├── __init__.py
+│ │ └── set_paths.py # Centralized path handling
 │
-├── templates/
-│   └── template.py
-│
-└── README.md
+├── .gitignore
+├── pyproject.toml
+├── README.md
+└── requirements.txt
 ```
 
 **Notes:**
@@ -86,3 +95,4 @@ This repository is primarily for learning and long‑term improvement.
 Any future revisions, cleanups, or alternate solutions will be documented here.
 
 ---
+
