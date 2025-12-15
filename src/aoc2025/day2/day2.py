@@ -7,7 +7,6 @@ class Day2(AOC2025.Day2):
         super().__init__()
         self.YEAR = 2025
         self.DAY = 2
-        self.part_letter = ""
         self.invalid_numbers = []
 
     def check_even(self, number: str) -> bool:
@@ -17,10 +16,9 @@ class Day2(AOC2025.Day2):
     def sum_invalid_numbers(cls, invalid_numbers):
         return sum(invalid_numbers)
 
-    def _read_lines(self, part_letter: str):
-        self.part_letter = part_letter
+    def _read_lines(self):
         path = sp.get_input_path(year=self.YEAR, day=self.DAY)
-        raw = sp.get_input(path, self.DAY, self.part_letter)
+        raw = sp.get_input(path, self.DAY)
         return [ln.strip() for ln in raw.split(",") if ln.strip()]
 
     # Part 1
@@ -47,7 +45,7 @@ class Day2(AOC2025.Day2):
 
     def part1(self):
         self.invalid_numbers = []
-        inp = self._read_lines("a")
+        inp = self._read_lines()
 
         for line in inp:
             start, end = line.split("-")
@@ -74,7 +72,7 @@ class Day2(AOC2025.Day2):
 
     def part2(self):
         self.invalid_numbers = []
-        inp = self._read_lines("b")
+        inp = self._read_lines()
 
         for line in inp:
             start, end = line.split("-")

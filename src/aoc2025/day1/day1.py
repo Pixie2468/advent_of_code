@@ -97,15 +97,15 @@ class Day1(AOC2025.Day1):
         dll.head = node50
         return dll
 
-    def _read_lines(self, part_letter: str) -> list[str]:
+    def _read_lines(self) -> list[str]:
         path = sp.get_input_path(year=self.YEAR, day=self.DAY)
-        raw = sp.get_input(path, self.DAY, part_letter)
+        raw = sp.get_input(path, self.DAY)
         return [ln.strip() for ln in raw.splitlines() if ln.strip()]
 
     def part1(self) -> int:
         count_zeros = 0
         dll = self._make_base_dll()
-        lines = self._read_lines("a")
+        lines = self._read_lines()
 
         for instr in lines:
             rotation = instr[0]
@@ -125,7 +125,7 @@ class Day1(AOC2025.Day1):
     def part2(self) -> int:
         count_zeros = 0
         dll = self._make_base_dll()
-        lines = self._read_lines("b")
+        lines = self._read_lines()
 
         for instr in lines:
             rotation = instr[0]

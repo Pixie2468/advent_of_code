@@ -10,9 +10,9 @@ def get_input_path(year: int, day: int) -> Path:
     return input_path
 
 
-def get_input(input_path: Path, day: int, part: str) -> str:
+def get_input(input_path: Path, day: int) -> str:
     try:
-        with open(f"{input_path}/day{day}_{part}.txt", "r") as f:
+        with open(f"{input_path}/day{day}.txt", "r") as f:
             file = f.read()
     except FileNotFoundError as e:
         print(e)
